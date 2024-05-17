@@ -73,4 +73,5 @@ godoc init
 
 ### Backend explanation
 
-![Backend](/.eraser/a5WYfKVeq8Sek7ssM9Fc___Cs3WexGEn0O5x35bLyqRQh5HCKC3___---figure---qAMSi0K-iPxm5n6Pn_Lrn---figure---00QXBfgA52UabrJ0HB9VHg.png "Backend")
+![image](https://github.com/mitsuaaki/godoc/assets/69150061/ac49811b-d87b-4cdf-b9d2-57e4f00ada88)
+
