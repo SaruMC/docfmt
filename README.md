@@ -1,6 +1,6 @@
 # godoc
 
-<img align="right" width="180px" src="https://raw.githubusercontent.com/mitsuaaki/godoc/.github/assets/godoc.png" alt="logo">
+<img align="right" width="280px" src="https://github.com/mitsuaaki/godoc/assets/69150061/25510cf3-17ca-44d2-93bb-81b698eb4504" alt="logo">
 
 [![Build Status]()]()
 
