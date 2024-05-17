@@ -54,20 +54,22 @@ godoc init
 | version               | **Required.** Provides the version of the project. | // @version 1.0                     |
 | description           | A short description of the application.            | // @description This is a cool desc |
 
-
 ### General File Info
 
-| Annotation            | Description                                        | Example                             |
-|-----------------------|----------------------------------------------------|-------------------------------------|
-| description           | A short description of the application.            | // @description This is a cool desc |
+| Annotation            | Description                                        | Example                               |
+|-----------------------|----------------------------------------------------|---------------------------------------|
+| description           | A short description of the file.                   | // @description This file contains... |
 
+### General Function Info
 
-## General Function Info
-
-| Annotation  | Description                             | Example                             |
-|-------------|-----------------------------------------|-------------------------------------|
-| description | A short description of the application. | // @description This is a cool desc |
-
+| Annotation   | Description                          | Example                               |
+|--------------|--------------------------------------|---------------------------------------|
+| description  | A short description of the function. | // @description This function does... |
+| param        | Description of a parameter.          | // @param a This is the first param   |
+| return       | Description of the return value.     | // @return The result of the addition |
+| complexity   | The complexity of the function.      | // @complexity O(n)                   |
+| example      | Example code for using the function. | // @example `functionExample()`       |
+| author       | Author of the function.              | // @author John Doe                   |
 
 ### Backend explanation
 
