@@ -28,7 +28,7 @@ And this is also why for the moment, this README really looks like the one from 
 
 2. Install godoc by using:
 ```shell
-go install github.com/mitsuaaki/godoc/cmd/godoc@latest 
+go install github.com/mitsuaaki/app/cmd/app@latest 
 ```
 To build from source you need [Go](https://golang.org/dl) (1.22 or newer).
 
@@ -41,7 +41,7 @@ Or download a pre-compiled binary from the [release page](https://github.com/mit
 
 3. Run `godoc init` in the root folder. This will parse your comments and generate the required files.
 ```shell
-godoc init
+app init
 ```
 
 ## Declarative Comments Format
