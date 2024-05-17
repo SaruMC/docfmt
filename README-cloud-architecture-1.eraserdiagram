@@ -1,0 +1,34 @@
+cloud-architecture-diagram
+
+Project [icon: gcp-filestore]
+Template [icon: file-pdf]
+Documentation [icon: file-pdf]
+
+godoc [icon: go] {
+  Scanner [icon: azure-search-grid]
+  Parser [icon: gcp-web-security-scanner]
+  Formatter [icon: pencil]
+
+  File1 [icon: file-contract]
+  File2 [icon: file-contract]
+  FileN [icon: file-contract]
+
+  Code [icon: codesandbox] {
+    Doctrsing [icon: gcp-document-ai]
+  }
+}
+
+Project > Scanner
+Scanner > File1
+Scanner > File2
+Scanner > FileN
+
+File1 > Parser
+File2 > Parser
+FileN > Parser
+
+Parser > Code
+Doctrsing > Formatter
+Template > Formatter
+
+Formatter > Documentation
