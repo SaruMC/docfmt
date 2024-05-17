@@ -9,8 +9,8 @@ import (
 
 func main() {
 	app := cli.NewApp()
-	app.Name = godoc.Name
-	app.Usage = godoc.Usage
+	app.Name = "app"
+	app.Usage = "A CLI tool that generates a formatted PDF of your documentation"
 	app.Version = godoc.Version
 
 	app.Commands = []*cli.Command{
