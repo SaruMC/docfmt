@@ -20,7 +20,12 @@ And this is also why for the moment, this README really looks like the one from 
 ## Contents
 - [Context](#context)
 - [Getting started](#getting-started)
+- [Supported languages](#supported-languages)
 - [Declarative Comments Format](#declarative-comments-format)
+  - [General Project Info](#general-project-info)
+  - [General File Info](#general-file-info)
+  - [General Function Info](#general-function-info)
+  - [Backend explanation](#backend-explanation)
 
 ## Getting started
 
@@ -43,6 +48,13 @@ Or download a pre-compiled binary from the [release page](https://github.com/mit
 ```shell
 app init
 ```
+
+## Supported languages
+
+At the moment, godoc only supports Go.<br />
+You can see some examples in the [example](https://github.com/mitsuaaki/godoc/example/) folder.
+
+If you want to add support for another language, you can create a new issue or a pull request.
 
 ## Declarative Comments Format
 
