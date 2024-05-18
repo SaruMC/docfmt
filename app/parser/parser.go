@@ -101,18 +101,21 @@ func (p *Parser) parseLine() {
 
 	case strings.HasPrefix(line, data.FunctionParameter):
 		p.createFunctionIfNotExists()
-		p.Functions[len(p.Functions)-1].Parameters = make(map[string]string)
 		params := strings.Split(strings.TrimPrefix(line, data.FunctionParameter), ",")
 		for _, param := range params {
-			kv := strings.Split(param, "=")
-			if len(kv) == 2 {
-				p.Functions[len(p.Functions)-1].Parameters[kv[0]] = kv[1]
+			kv := strings.Split(param, " - ")
+			if len(kv) == 3 {
+				p.Functions[len(p.Functions)-1].Parameters = append(p.Functions[len(p.Functions)-1].Parameters, data.Parameter{Name: kv[0], Value: kv[1], Description: kv[2]})
 			}
 		}
 
 	case strings.HasPrefix(line, data.FunctionReturn):
 		p.createFunctionIfNotExists()
-		p.Functions[len(p.Functions)-1].Returns = strings.Split(strings.TrimPrefix(line, data.FunctionReturn), ",")
+		returns := strings.Split(strings.TrimPrefix(line, data.FunctionReturn), ",")
+		for _, ret := range returns {
+			ret := strings.Split(ret, " - ")
+			p.Functions[len(p.Functions)-1].Returns = append(p.Functions[len(p.Functions)-1].Returns, data.Return{Value: ret[0], Description: ret[1]})
+		}
 
 	case strings.HasPrefix(line, data.FunctionComplexity):
 		p.createFunctionIfNotExists()
