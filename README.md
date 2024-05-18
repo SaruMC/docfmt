@@ -60,17 +60,17 @@ If you want to add support for another language, you can create a new issue or a
 
 ### General Project Info
 
-| Annotation            | Description                                        | Example                             |
-|-----------------------|----------------------------------------------------|-------------------------------------|
-| title                 | **Required.** The title of the project.            | // @title Godoc Example             |
-| version               | **Required.** Provides the version of the project. | // @version 1.0                     |
-| description           | A short description of the application.            | // @description This is a cool desc |
+| Annotation           | Description                                         | Example                             |
+|----------------------|-----------------------------------------------------|-------------------------------------|
+| project-title        | **Required.** The title of the project.             | // @title Godoc Example             |
+| project-version      | **Required.** Provides the version of the project.  | // @version 1.0                     |
+| project-description  | A short description of the application.             | // @description This is a cool desc |
 
 ### General File Info
 
-| Annotation            | Description                                        | Example                               |
-|-----------------------|----------------------------------------------------|---------------------------------------|
-| description           | A short description of the file.                   | // @description This file contains... |
+| Annotation       | Description                                        | Example                               |
+|------------------|----------------------------------------------------|---------------------------------------|
+| file-description | A short description of the file.                   | // @description This file contains... |
 
 ### General Function Info
 
