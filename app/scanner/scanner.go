@@ -2,9 +2,6 @@ package scanner
 
 import (
 	"github.com/misuaaki/godoc/app/scanner/data"
-	"go/ast"
-	"go/parser"
-	"go/token"
 	"os"
 	"path/filepath"
 	"strings"
@@ -31,7 +28,7 @@ func (s *Scanner) Scan(path, ext string) error {
 		return nil
 	}
 
-	pkg := &data.Package{Path: path, Files: make(map[string]*ast.File)}
+	pkg := &data.Package{Path: path, Files: make(map[string]string)}
 	s.Packages[path] = pkg
 
 	return filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
@@ -41,13 +38,7 @@ func (s *Scanner) Scan(path, ext string) error {
 
 		if !info.IsDir() {
 			if strings.HasSuffix(path, "."+ext) {
-				fset := token.NewFileSet()
-				parsedFile, err := parser.ParseFile(fset, path, nil, parser.ParseComments)
-				if err != nil {
-					return err
-				}
-
-				pkg.Files[path] = parsedFile
+				pkg.Files[path] = path
 			}
 		}
 

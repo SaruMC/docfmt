@@ -2,7 +2,6 @@ package data
 
 import (
 	"fmt"
-	"go/ast"
 )
 
 // Package represents a package
@@ -10,12 +9,12 @@ type Package struct {
 	Path string
 	Name string
 
-	Files map[string]*ast.File
+	Files map[string]string
 }
 
 // NewPackage creates a new Package instance
 func NewPackage(path string) *Package {
-	return &Package{Path: path, Files: make(map[string]*ast.File)}
+	return &Package{Path: path, Files: make(map[string]string)}
 }
 
 // GetFiles returns the files of the package
