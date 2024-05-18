@@ -1,10 +1,10 @@
-package scanner
+package data
 
 import (
 	"testing"
 )
 
-func TestNewPackage(t *testing.T) {
+func TestPackage_NewPackage(t *testing.T) {
 	p := NewPackage("testPath")
 
 	if p == nil {
@@ -24,7 +24,7 @@ func TestNewPackage(t *testing.T) {
 	}
 }
 
-func TestGetFiles(t *testing.T) {
+func TestPackage_GetFiles(t *testing.T) {
 	p := NewPackage("testPath")
 	p.Files["file1.go"] = nil
 	p.Files["file2.go"] = nil
@@ -44,7 +44,7 @@ func TestGetFiles(t *testing.T) {
 	}
 }
 
-func TestString(t *testing.T) {
+func TestPackage_String(t *testing.T) {
 	p := NewPackage("testPath")
 	p.Files["file1.go"] = nil
 	p.Files["file2.go"] = nil
