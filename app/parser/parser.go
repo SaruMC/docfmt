@@ -7,21 +7,8 @@ import (
 	"strings"
 )
 
-const (
-	// General project information
-	title       = "@project-title "
-	version     = "@project-version "
-	description = "@project-description "
-)
-
-type Project struct {
-	Title       string
-	Version     string
-	Description string
-}
-
 type Parser struct {
-	ProjectInfo Project
+	ProjectInfo data.Project
 	FileInfo    data.File
 	Functions   []data.Function
 
@@ -31,6 +18,18 @@ type Parser struct {
 
 func NewParser() *Parser {
 	return &Parser{}
+}
+
+func (p *Parser) GetProjectInfo() data.Project {
+	return p.ProjectInfo
+}
+
+func (p *Parser) GetFileInfo() data.File {
+	return p.FileInfo
+}
+
+func (p *Parser) GetFunctions() []data.Function {
+	return p.Functions
 }
 
 func (p *Parser) Parse(filePath string) error {
@@ -73,14 +72,14 @@ func (p *Parser) parseLine() {
 
 	// Parse project information
 	switch {
-	case strings.HasPrefix(line, title):
-		p.ProjectInfo.Title = strings.TrimPrefix(line, title)
+	case strings.HasPrefix(line, data.Title):
+		p.ProjectInfo.Title = strings.TrimPrefix(line, data.Title)
 
-	case strings.HasPrefix(line, version):
-		p.ProjectInfo.Version = strings.TrimPrefix(line, version)
+	case strings.HasPrefix(line, data.Version):
+		p.ProjectInfo.Version = strings.TrimPrefix(line, data.Version)
 
-	case strings.HasPrefix(line, description):
-		p.ProjectInfo.Description = strings.TrimPrefix(line, description)
+	case strings.HasPrefix(line, data.Description):
+		p.ProjectInfo.Description = strings.TrimPrefix(line, data.Description)
 	}
 
 	// Parse file information

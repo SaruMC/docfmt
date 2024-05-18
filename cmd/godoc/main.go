@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/misuaaki/godoc"
 	gen "github.com/misuaaki/godoc/app"
+	"github.com/misuaaki/godoc/app/formatter"
 	"github.com/misuaaki/godoc/app/scanner"
 	"github.com/urfave/cli/v2"
 	"log"
@@ -42,7 +43,7 @@ func main() {
 		},
 		{
 			Name:  "test-generate",
-			Usage: "Generate a formatted PDF of your documentation",
+			Usage: "Generate a simple textual of your documentation - testing purposes only",
 			Action: func(c *cli.Context) error {
 				path := c.Args().First()
 				if path == "" {
@@ -50,6 +51,22 @@ func main() {
 				}
 
 				err := gen.GenerateTextualDocumentation(path)
+				if err != nil {
+					return err
+				}
+				return nil
+			},
+		},
+		{
+			Name:  "generate",
+			Usage: "Generate a formatted PDF of your documentation",
+			Action: func(c *cli.Context) error {
+				path := c.Args().First()
+				if path == "" {
+					return cli.ShowCommandHelp(c, "generate")
+				}
+
+				err := formatter.GeneratePDF(path)
 				if err != nil {
 					return err
 				}
