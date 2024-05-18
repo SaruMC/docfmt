@@ -32,8 +32,36 @@ func TestFunction_GetDescription(t *testing.T) {
 func TestFunction_GetParameters(t *testing.T) {
 	f := NewFunction("GetParameters")
 
-	f.Parameters = map[string]string{"param1": "string", "param2": "int"}
+	f.Parameters = []Parameter{
+		{Name: "param1", Value: "int", Description: "A basic integer parameter"},
+		{Name: "param2", Value: "string", Description: "A basic string parameter"},
+	}
+
 	if len(f.GetParameters()) != 2 {
+		t.Error("GetParameters() should return the parameters of the function")
+	}
+
+	if f.GetParameters()[0].GetName() != "param1" {
+		t.Error("GetParameters() should return the parameters of the function")
+	}
+
+	if f.GetParameters()[1].GetName() != "param2" {
+		t.Error("GetParameters() should return the parameters of the function")
+	}
+
+	if f.GetParameters()[0].GetValue() != "int" {
+		t.Error("GetParameters() should return the parameters of the function")
+	}
+
+	if f.GetParameters()[1].GetValue() != "string" {
+		t.Error("GetParameters() should return the parameters of the function")
+	}
+
+	if f.GetParameters()[0].GetDescription() != "A basic integer parameter" {
+		t.Error("GetParameters() should return the parameters of the function")
+	}
+
+	if f.GetParameters()[1].GetDescription() != "A basic string parameter" {
 		t.Error("GetParameters() should return the parameters of the function")
 	}
 }
@@ -41,8 +69,28 @@ func TestFunction_GetParameters(t *testing.T) {
 func TestFunction_GetReturns(t *testing.T) {
 	f := NewFunction("GetReturns")
 
-	f.Returns = []string{"int", "error"}
+	f.Returns = []Return{
+		{Value: "int", Description: "A basic integer return value"},
+		{Value: "error", Description: "An error return value"},
+	}
+
 	if len(f.GetReturns()) != 2 {
+		t.Error("GetReturns() should return the return types of the function")
+	}
+
+	if f.GetReturns()[0].GetValue() != "int" {
+		t.Error("GetReturns() should return the return types of the function")
+	}
+
+	if f.GetReturns()[1].GetValue() != "error" {
+		t.Error("GetReturns() should return the return types of the function")
+	}
+
+	if f.GetReturns()[0].GetDescription() != "A basic integer return value" {
+		t.Error("GetReturns() should return the return types of the function")
+	}
+
+	if f.GetReturns()[1].GetDescription() != "An error return value" {
 		t.Error("GetReturns() should return the return types of the function")
 	}
 }
