@@ -20,6 +20,18 @@ func NewParser() *Parser {
 	return &Parser{}
 }
 
+func (p *Parser) GetProjectInfo() data.Project {
+	return p.ProjectInfo
+}
+
+func (p *Parser) GetFileInfo() data.File {
+	return p.FileInfo
+}
+
+func (p *Parser) GetFunctions() []data.Function {
+	return p.Functions
+}
+
 func (p *Parser) Parse(filePath string) error {
 	file, err := os.Open(filePath)
 	if err != nil {
