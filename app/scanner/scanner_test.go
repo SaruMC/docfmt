@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestNewScanner(t *testing.T) {
+func TestScanner_NewScanner(t *testing.T) {
 	s := NewScanner()
 
 	if s == nil {
@@ -21,7 +21,28 @@ func TestNewScanner(t *testing.T) {
 	}
 }
 
-func TestScan(t *testing.T) {
+func TestScanner_GetPackages(t *testing.T) {
+	s := NewScanner()
+
+	if s.GetPackages() == nil {
+		t.Error("GetPackages() should not return nil")
+	}
+
+	if len(s.GetPackages()) != 0 {
+		t.Error("GetPackages() should return an empty map")
+	}
+
+	s.Packages["test"] = nil
+	if len(s.GetPackages()) != 1 {
+		t.Error("GetPackages() should return a map with one element")
+	}
+
+	if s.GetPackages()["test"] != nil {
+		t.Error("GetPackages() should return a map with one element")
+	}
+}
+
+func TestScanner_Scan(t *testing.T) {
 	s := NewScanner()
 	err := s.Scan(".", "go")
 
