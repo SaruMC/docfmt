@@ -4,8 +4,8 @@ package data
 const (
 	FunctionName        = "func"
 	FunctionDescription = "@description"
-	FunctionParameters  = "@parameters"
-	FunctionReturns     = "@returns"
+	FunctionParameter   = "@param"
+	FunctionReturn      = "@return"
 	FunctionComplexity  = "@complexity"
 	FunctionExample     = "@example"
 	FunctionAuthor      = "@author"
