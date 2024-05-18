@@ -2,7 +2,7 @@ package data
 
 // Function information
 const (
-	FunctionName        = "func "
+	FunctionName        = "function "
 	FunctionDescription = "@description "
 	FunctionParameter   = "@param "
 	FunctionReturn      = "@return "
