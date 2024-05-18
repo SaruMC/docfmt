@@ -26,8 +26,8 @@ func TestPackage_NewPackage(t *testing.T) {
 
 func TestPackage_GetFiles(t *testing.T) {
 	p := NewPackage("testPath")
-	p.Files["file1.go"] = nil
-	p.Files["file2.go"] = nil
+	p.Files["file1.go"] = ""
+	p.Files["file2.go"] = ""
 
 	files := p.GetFiles()
 
@@ -46,8 +46,8 @@ func TestPackage_GetFiles(t *testing.T) {
 
 func TestPackage_String(t *testing.T) {
 	p := NewPackage("testPath")
-	p.Files["file1.go"] = nil
-	p.Files["file2.go"] = nil
+	p.Files["file1.go"] = ""
+	p.Files["file2.go"] = ""
 
 	expected := "Files: [file1.go file2.go]"
 	got := p.String()
