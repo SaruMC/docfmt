@@ -10,9 +10,9 @@ function main() {
 }
 
 // @description This function adds two numbers together.
-// @param a - The first number.
-// @param b - The second number.
-// @return The sum of the two numbers.
+// @param a - int - The first number to add.
+// @param b - int - The second number to add.
+// @return int - The sum of the two numbers.
 // @example add(1, 2)
 // @complexity O(1)
 // @author John Doe
