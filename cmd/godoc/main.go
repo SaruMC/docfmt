@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/misuaaki/godoc"
+	gen "github.com/misuaaki/godoc/app"
 	"github.com/misuaaki/godoc/app/scanner"
 	"github.com/urfave/cli/v2"
 	"log"
@@ -26,11 +27,27 @@ func main() {
 				}
 
 				s := scanner.NewScanner()
-				if err := s.Scan(path, ".go"); err != nil {
+				if err := s.Scan(path, "go"); err != nil {
 					return err
 				}
 
 				fmt.Println(s.Packages[path].String())
+				return nil
+			},
+		},
+		{
+			Name:  "generate",
+			Usage: "Generate a formatted PDF of your documentation",
+			Action: func(c *cli.Context) error {
+				path := c.Args().First()
+				if path == "" {
+					return cli.ShowCommandHelp(c, "generate")
+				}
+
+				err := gen.GenerateDocumentation(path)
+				if err != nil {
+					return err
+				}
 				return nil
 			},
 		},
