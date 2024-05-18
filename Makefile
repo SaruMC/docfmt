@@ -29,7 +29,7 @@ install: deps
 
 .PHONY: test
 test:
-	echo "mode: count" > .github/gen/coverage.out
+	echo "mode: count" > .github/coverage.out
 	for PKG in $(PACKAGES); do \
 		$(GOCMD) test -v -covermode=count -coverprofile=profile.out $$PKG > tmp.out; \
 		cat tmp.out; \
@@ -41,7 +41,7 @@ test:
 			exit; \
 		fi; \
 		if [ -f profile.out ]; then \
-			cat profile.out | grep -v "mode:" >> .github/gen/coverage.out; \
+			cat profile.out | grep -v "mode:" >> .github/coverage.out; \
 			rm profile.out; \
 		fi; \
 	done
@@ -74,5 +74,5 @@ fmt-check:
 
 .PHONY: view-covered
 view-covered:
-	$(GOTEST) -coverprofile=.github/gen/cover.out $(TARGET)
-	$(GOCMD) tool cover -html=.github/gen/cover.out
+	$(GOTEST) -coverprofile=.github/cover.out $(TARGET)
+	$(GOCMD) tool cover -html=.github/cover.out
