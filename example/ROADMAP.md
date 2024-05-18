@@ -1,0 +1,34 @@
+# Supported Languages
+
+- [x] Golang
+- [ ] C/C++
+- [ ] C#
+- [ ] Python
+- [ ] Java
+- [ ] Rust
+- [ ] JavaScript/TypeScript
+- [ ] Shell
+- [ ] PHP
+- [ ] Ruby
+- [ ] Swift
+- [ ] Kotlin
+- [ ] Objective-C
+- [ ] Scala
+- [ ] Lua
+- [ ] Perl
+- [ ] R
+- [ ] Groovy
+- [ ] Haskell
+- [ ] Julia
+- [ ] Clojure
+- [ ] Elixir
+- [ ] Erlang
+- [ ] Crystal
+- [ ] Dart
+- [ ] F#
+- [ ] CoffeeScript
+- [ ] Scheme
+- [ ] Vim script
+- [ ] OCaml
+- [ ] PowerShell
+- [ ] Assembly
