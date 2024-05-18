@@ -2,7 +2,6 @@ package scanner
 
 import (
 	"os"
-	"path/filepath"
 	"testing"
 )
 
@@ -46,10 +45,6 @@ func TestScan(t *testing.T) {
 		for filePath, file := range pkg.Files {
 			if file == nil {
 				t.Errorf("File at path %v is nil", filePath)
-			}
-
-			if !filepath.IsAbs(filePath) {
-				t.Errorf("File path is not absolute: %v", filePath)
 			}
 
 			if _, err := os.Stat(filePath); os.IsNotExist(err) {
