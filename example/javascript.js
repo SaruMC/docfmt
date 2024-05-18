@@ -1,8 +1,10 @@
-// @description This is an example of a JavaScript file.
+// @file-description This is an example of a JavaScript file.
 
-// @title JavaScript Example
-// @version
-// @description A simple example of a JavaScript file working with godoc documentation.
+// @project-title JavaScript Example
+// @project-version 1.0.0
+// @project-description A simple example of a JavaScript file working with godoc documentation.
+
+// @description This is the main function.
 function main() {
     console.log(add(1, 2) + " is the sum of 1 and 2.");
 }
