@@ -18,16 +18,21 @@ func main() {
 
 	app.Commands = []*cli.Command{
 		{
-			Name:  "scan",
+			Name:  "test-scan",
 			Usage: "Scan your project at the given path and under and populate the Packages map - used for testing purposes",
 			Action: func(c *cli.Context) error {
 				path := c.Args().First()
 				if path == "" {
-					return cli.ShowCommandHelp(c, "scan")
+					return cli.ShowCommandHelp(c, "test-scan")
+				}
+
+				extension := c.Args().Get(1)
+				if extension == "" {
+					return cli.ShowCommandHelp(c, "test-scan")
 				}
 
 				s := scanner.NewScanner()
-				if err := s.Scan(path, "go"); err != nil {
+				if err := s.Scan(path, extension); err != nil {
 					return err
 				}
 
@@ -36,15 +41,15 @@ func main() {
 			},
 		},
 		{
-			Name:  "generate",
+			Name:  "test-generate",
 			Usage: "Generate a formatted PDF of your documentation",
 			Action: func(c *cli.Context) error {
 				path := c.Args().First()
 				if path == "" {
-					return cli.ShowCommandHelp(c, "generate")
+					return cli.ShowCommandHelp(c, "test-generate")
 				}
 
-				err := gen.GenerateDocumentation(path)
+				err := gen.GenerateTextualDocumentation(path)
 				if err != nil {
 					return err
 				}
