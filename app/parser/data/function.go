@@ -2,13 +2,13 @@ package data
 
 // Function information
 const (
-	FunctionName        = "func"
-	FunctionDescription = "@description"
-	FunctionParameter   = "@param"
-	FunctionReturn      = "@return"
-	FunctionComplexity  = "@complexity"
-	FunctionExample     = "@example"
-	FunctionAuthor      = "@author"
+	FunctionName        = "func "
+	FunctionDescription = "@description "
+	FunctionParameter   = "@param "
+	FunctionReturn      = "@return "
+	FunctionComplexity  = "@complexity "
+	FunctionExample     = "@example "
+	FunctionAuthor      = "@author "
 )
 
 // Function represents a function

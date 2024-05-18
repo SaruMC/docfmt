@@ -1,7 +1,7 @@
 package data
 
 // FileDescription represents the general file information
-const FileDescription = "@description"
+const FileDescription = "@description "
 
 // File represents a file
 type File struct {
