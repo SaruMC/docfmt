@@ -66,8 +66,7 @@ func main() {
 					return cli.ShowCommandHelp(c, "generate")
 				}
 
-				f := formatter.NewFormatter()
-				if err := f.GeneratePDF(path); err != nil {
+				if err := formatter.GeneratePDF(path); err != nil {
 					return err
 				}
 				return nil
