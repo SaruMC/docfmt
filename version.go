@@ -1,3 +1,3 @@
 package godoc
 
-const Version = "v1.0.0"
+const Version = "v0.1.0-alpha.1"

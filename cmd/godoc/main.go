@@ -58,7 +58,7 @@ func main() {
 			},
 		},
 		{
-			Name:  "generate",
+			Name:  "init",
 			Usage: "Generate a formatted PDF of your documentation",
 			Action: func(c *cli.Context) error {
 				path := c.Args().First()
@@ -66,8 +66,8 @@ func main() {
 					return cli.ShowCommandHelp(c, "generate")
 				}
 
-				err := formatter.GeneratePDF(path)
-				if err != nil {
+				f := formatter.NewFormatter()
+				if err := f.GeneratePDF(path); err != nil {
 					return err
 				}
 				return nil

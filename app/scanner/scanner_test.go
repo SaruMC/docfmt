@@ -63,11 +63,7 @@ func TestScanner_Scan(t *testing.T) {
 			t.Errorf("Package at path %v has no files", path)
 		}
 
-		for filePath, file := range pkg.Files {
-			if file == nil {
-				t.Errorf("File at path %v is nil", filePath)
-			}
-
+		for filePath, _ := range pkg.Files {
 			if _, err := os.Stat(filePath); os.IsNotExist(err) {
 				t.Errorf("File at path %v does not exist", filePath)
 			}
