@@ -25,7 +25,7 @@ And this is also why for the moment, this README really looks like the one from 
   - [General Project Info](#general-project-info)
   - [General File Info](#general-file-info)
   - [General Function Info](#general-function-info)
-  - [Backend explanation](#backend-explanation)
+- [Backend explanation](#backend-explanation)
 
 ## Getting started
 
@@ -41,7 +41,7 @@ Or download a pre-compiled binary from the [release page](https://github.com/mit
 
 3. Run `godoc init` in the root folder. This will parse your comments and generate the required files.
 ```shell
-app init
+godoc init
 ```
 
 For the moment, godoc only supports a few languages. <br>
