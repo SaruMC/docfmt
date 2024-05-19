@@ -33,14 +33,9 @@ And this is also why for the moment, this README really looks like the one from 
 
 2. Install godoc by using:
 ```shell
-go install github.com/mitsuaaki/app/cmd/app@latest 
+go install github.com/mitsuaaki/godoc/cmd/godoc@latest 
 ```
 To build from source you need [Go](https://golang.org/dl) (1.22 or newer).
-
-Alternatively you can run the docker image:
-```shell
-make docker
-```
 
 Or download a pre-compiled binary from the [release page](https://github.com/mitsuaaki/godoc/releases).
 
@@ -48,6 +43,20 @@ Or download a pre-compiled binary from the [release page](https://github.com/mit
 ```shell
 app init
 ```
+
+For the moment, godoc only supports a few languages. <br>
+If you want to add support for another language, you can create a new issue or a pull request.<br>
+
+Also, only testing purposes command or available:
+```shell
+godoc test-generate <options>
+godoc test-scan <options>
+```
+
+If you want to contribute to the PDF part, that would be great. <br>
+You can find the code in the following folder: [pdf](https://github.com/mitsuaaki/godoc/app/formatter). 
+
+(Help me, it's really pain in the ass however it's not that hard just boring)
 
 ## Supported languages
 
