@@ -1,8 +1,11 @@
-<img align="right" width="300px" src="https://github.com/mitsuaaki/godoc/assets/69150061/25510cf3-17ca-44d2-93bb-81b698eb4504" alt="logo">
+<img align="right" width="300px" src="https://github.com/mitsuaaki/docfmt/assets/69150061/25510cf3-17ca-44d2-93bb-81b698eb4504" alt="logo">
 
 # godoc
 
-[![Build Status]()]()
+[![Build Status](https://github.com/mitsuaaki/docfmt/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/features/actions)
+[![codebeat badge](https://codebeat.co/badges/c8c55d12-43ca-40dd-9901-cf87a472273b)](https://codebeat.co/projects/github-com-mitsuaaki-docfmt-main)
+[![Release](https://img.shields.io/github/release/mitsuaaki/docfmt.svg?style=flat-square)](https://github.com/mitsuaaki/docfmt/releases)
+
 
 Godoc generates a formatted PDF of your code's documentation also name docstring.
 It allows you to have a documentation that's easy to read / access for every developer that can work on your project.
