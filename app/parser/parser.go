@@ -2,7 +2,7 @@ package parser
 
 import (
 	"bufio"
-	"github.com/misuaaki/godoc/app/parser/data"
+	"github.com/misuaaki/docfmt/app/parser/data"
 	"os"
 	"strings"
 )

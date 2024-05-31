@@ -3,8 +3,8 @@ package formatter
 import (
 	"fmt"
 	"github.com/go-pdf/fpdf"
-	"github.com/misuaaki/godoc/app/parser"
-	"github.com/misuaaki/godoc/app/scanner"
+	"github.com/misuaaki/docfmt/app/parser"
+	"github.com/misuaaki/docfmt/app/scanner"
 	"strings"
 )
 

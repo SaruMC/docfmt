@@ -1,4 +1,4 @@
-module github.com/misuaaki/godoc
+module github.com/misuaaki/docfmt
 
 go 1.22.2
 

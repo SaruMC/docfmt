@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/misuaaki/godoc"
-	gen "github.com/misuaaki/godoc/app"
-	"github.com/misuaaki/godoc/app/formatter"
-	"github.com/misuaaki/godoc/app/scanner"
+	"github.com/misuaaki/docfmt"
+	gen "github.com/misuaaki/docfmt/app"
+	"github.com/misuaaki/docfmt/app/formatter"
+	"github.com/misuaaki/docfmt/app/scanner"
 	"github.com/urfave/cli/v2"
 	"log"
 	"os"
