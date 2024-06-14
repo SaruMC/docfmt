@@ -13,7 +13,7 @@ import (
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "app"
+	app.Name = "fdocs"
 	app.Usage = "A CLI tool that generates a formatted PDF of your documentation"
 	app.Version = docsformatter.Version
 
