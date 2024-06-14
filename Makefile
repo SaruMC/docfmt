@@ -13,19 +13,19 @@ GOVET:=$(GOCMD) vet
 GOPATH:=$(shell $(GOCMD) env GOPATH)
 u := $(if $(update),-u)
 
-BINARY_NAME:= godoc
-PACKAGES:=$(shell $(GOLIST) github.com/mitsuaaki/godoc github.com/mitsuaaki/godoc/cmd/godoc github.com/mitsuaaki/godoc/app)
+BINARY_NAME:= docs-formatter
+PACKAGES:=$(shell $(GOLIST) github.com/mitsuaaki/docs-formatter github.com/mitsuaaki/docs-formatter/cmd/docs-formatter github.com/mitsuaaki/docs-formatter/app)
 GOFILES:=$(shell find . -name "*.go" -type f)
 
 all: test build
 
 .PHONY: build
 build: deps
-	$(GOBUILD) -o $(BINARY_NAME) ./cmd/godoc
+	$(GOBUILD) -o $(BINARY_NAME) ./cmd/docs-formatter
 
 .PHONY: install
 install: deps
-	$(GOINSTALL) ./cmd/godoc
+	$(GOINSTALL) ./cmd/docs-formatter
 
 .PHONY: test
 test:
