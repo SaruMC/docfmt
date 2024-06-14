@@ -2,7 +2,7 @@ package parser
 
 import (
 	"bufio"
-	"github.com/misuaaki/docfmt/app/parser/data"
+	"github.com/mitsuaaki/docs-formatter/app/parser/data"
 	"os"
 	"strings"
 )

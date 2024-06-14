@@ -1,6 +1,6 @@
-module github.com/misuaaki/docfmt
+module github.com/mitsuaaki/docs-formatter
 
-go 1.22.2
+go 1.22.4
 
 require (
 	github.com/go-pdf/fpdf v0.9.0

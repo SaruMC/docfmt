@@ -1,7 +1,7 @@
 package scanner
 
 import (
-	"github.com/misuaaki/docfmt/app/scanner/data"
+	"github.com/mitsuaaki/docs-formatter/app/scanner/data"
 	"os"
 	"path/filepath"
 	"strings"
