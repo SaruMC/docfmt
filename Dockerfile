@@ -22,7 +22,7 @@ ENV GOARCH=$TARGETARCH \
     GOOS=$TARGETOS
 
 # Build the Go app
-RUN CGO_ENABLED=0 GOOS=linux go build -v -a -installsuffix cgo -o godoc cmd/godoc/main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -v -a -installsuffix cgo -o docs-formatter cmd/docs-formatter/main.go
 
 
 ######## Start a new stage from scratch #######
@@ -31,6 +31,6 @@ FROM --platform=$TARGETPLATFORM scratch
 WORKDIR /code/
 
 # Copy the Pre-built binary file from the previous stage
-COPY --from=builder /app/godoc /bin/godoc
+COPY --from=builder /app/docs-formatter /bin/docs-formatter
 
-ENTRYPOINT ["/bin/godoc"]
+ENTRYPOINT ["/bin/docs-formatter"]

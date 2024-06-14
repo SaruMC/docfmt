@@ -2,7 +2,7 @@
 
 // @project-title JavaScript Example
 // @project-version 1.0.0
-// @project-description A simple example of a JavaScript file working with godoc documentation.
+// @project-description A simple example of a JavaScript file working with docs-formatter documentation.
 
 // @description This is the main function.
 function main() {

@@ -1,13 +1,13 @@
 <img align="right" width="300px" src="https://github.com/mitsuaaki/docfmt/assets/69150061/25510cf3-17ca-44d2-93bb-81b698eb4504" alt="logo">
 
-# godoc
+# docs-formatter
 
 [![Build Status](https://github.com/mitsuaaki/docfmt/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/features/actions)
 [![codebeat badge](https://codebeat.co/badges/c8c55d12-43ca-40dd-9901-cf87a472273b)](https://codebeat.co/projects/github-com-mitsuaaki-docfmt-main)
 [![Release](https://img.shields.io/github/release/mitsuaaki/docfmt.svg?style=flat-square)](https://github.com/mitsuaaki/docfmt/releases)
 
 
-Godoc generates a formatted PDF of your code's documentation also name docstring.
+docs-formatter generates a formatted PDF of your code's documentation also name docstring.
 It allows you to have a documentation that's easy to read / access for every developer that can work on your project.
 
 ## Context
@@ -17,7 +17,7 @@ Well-known solutions like [swagger](https://swagger.io/) exist.
 Nowadays, however, public documentation can be a source of vulnerabilities. 
 To protect my infrastructure from fuzzing, I set myself the challenge of creating a PDF documentation generated from the docstring of any project.
 
-This is how godoc was born.
+This is how docs-formatter was born.
 And this is also why for the moment, this README really looks like the one from a cool project named [Swaggo](https://github.com/swaggo).
 
 ## Contents
@@ -34,37 +34,37 @@ And this is also why for the moment, this README really looks like the one from 
 
 1. Add comments to your source code, See [Declarative Comments Format](#declarative-comments-format).
 
-2. Install godoc by using:
+2. Install docs-formatter by using:
 ```shell
-go install github.com/mitsuaaki/godoc/cmd/godoc@latest 
+go install github.com/mitsuaaki/docs-formatter/cmd/docs-formatter@latest 
 ```
 To build from source you need [Go](https://golang.org/dl) (1.22 or newer).
 
-Or download a pre-compiled binary from the [release page](https://github.com/mitsuaaki/godoc/releases).
+Or download a pre-compiled binary from the [release page](https://github.com/mitsuaaki/docs-formatter/releases).
 
-3. Run `godoc init` in the root folder. This will parse your comments and generate the required files.
+3. Run `docs-formatter init` in the root folder. This will parse your comments and generate the required files.
 ```shell
-godoc init
+fdocs init
 ```
 
-For the moment, godoc only supports a few languages. <br>
+For the moment, docs-formatter only supports a few languages. <br>
 If you want to add support for another language, you can create a new issue or a pull request.<br>
 
 Also, only testing purposes command or available:
 ```shell
-godoc test-generate <options>
-godoc test-scan <options>
+fdocs test-generate <options>
+fdocs test-scan <options>
 ```
 
 If you want to contribute to the PDF part, that would be great. <br>
-You can find the code in the following folder: [pdf](https://github.com/mitsuaaki/godoc/app/formatter). 
+You can find the code in the following folder: [pdf](https://github.com/mitsuaaki/docs-formatter/app/formatter). 
 
 (Help me, it's really pain in the ass however it's not that hard just boring)
 
 ## Supported languages
 
-At the moment, godoc only supports Go.<br />
-You can see some examples in the [example](https://github.com/mitsuaaki/godoc/example/) folder.
+At the moment, docs-formatter only supports Go.<br />
+You can see some examples in the [example](https://github.com/mitsuaaki/docs-formatter/example/) folder.
 
 If you want to add support for another language, you can create a new issue or a pull request.
 
@@ -74,7 +74,7 @@ If you want to add support for another language, you can create a new issue or a
 
 | Annotation           | Description                                         | Example                             |
 |----------------------|-----------------------------------------------------|-------------------------------------|
-| project-title        | **Required.** The title of the project.             | // @title Godoc Example             |
+| project-title        | **Required.** The title of the project.             | // @title docs-formatter Example             |
 | project-version      | **Required.** Provides the version of the project.  | // @version 1.0                     |
 | project-description  | A short description of the application.             | // @description This is a cool desc |
 
@@ -97,5 +97,5 @@ If you want to add support for another language, you can create a new issue or a
 
 ### Backend explanation
 
-![image](https://github.com/mitsuaaki/godoc/assets/69150061/ac49811b-d87b-4cdf-b9d2-57e4f00ada88)
+![image](https://github.com/mitsuaaki/docs-formatter/assets/69150061/ac49811b-d87b-4cdf-b9d2-57e4f00ada88)
 

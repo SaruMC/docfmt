@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/misuaaki/docfmt"
-	gen "github.com/misuaaki/docfmt/app"
-	"github.com/misuaaki/docfmt/app/formatter"
-	"github.com/misuaaki/docfmt/app/scanner"
+	"github.com/mitsuaaki/docs-formatter"
+	gen "github.com/mitsuaaki/docs-formatter/app"
+	"github.com/mitsuaaki/docs-formatter/app/formatter"
+	"github.com/mitsuaaki/docs-formatter/app/scanner"
 	"github.com/urfave/cli/v2"
 	"log"
 	"os"
@@ -13,9 +13,9 @@ import (
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "app"
+	app.Name = "fdocs"
 	app.Usage = "A CLI tool that generates a formatted PDF of your documentation"
-	app.Version = godoc.Version
+	app.Version = docsformatter.Version
 
 	app.Commands = []*cli.Command{
 		{

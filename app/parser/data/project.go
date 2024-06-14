@@ -1,7 +1,6 @@
 package data
 
 const (
-	// General project information
 	Title       = "@project-title "
 	Version     = "@project-version "
 	Description = "@project-description "

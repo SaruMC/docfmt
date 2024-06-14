@@ -2,8 +2,8 @@ package app
 
 import (
 	"fmt"
-	"github.com/misuaaki/docfmt/app/parser"
-	"github.com/misuaaki/docfmt/app/scanner"
+	"github.com/mitsuaaki/docs-formatter/app/parser"
+	"github.com/mitsuaaki/docs-formatter/app/scanner"
 	"os"
 )
 
